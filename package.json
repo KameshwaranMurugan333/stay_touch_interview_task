@@ -1,0 +1,15 @@
+{
+  "name": "int-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hasura:ready": "hasura metadata apply && hasura migrate apply --database-name stayTouch_v1 && hasura seed apply --database-name stayTouch_v1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hasura-cli": "^2.6.1"
+  }
+}
