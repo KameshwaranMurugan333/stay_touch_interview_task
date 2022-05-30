@@ -20,7 +20,7 @@ npm run start:hasura //To run hasura engine
 Then open the console at localhost:4000 or [click here](http://localhost:4000) and add the header 
 
 ```
-Authoriztaion : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJ1c2VyX25hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn0.dAfJ6Y3wTJGj3iD-XPWT6PzwIiGR223dUjo0rwAH3lg
+Authorization : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJ1c2VyX25hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn0.dAfJ6Y3wTJGj3iD-XPWT6PzwIiGR223dUjo0rwAH3lg
 ```
 then run the below query.
 
