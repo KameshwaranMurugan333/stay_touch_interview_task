@@ -9,7 +9,12 @@ docker ps //To check container is running or not
 
 npm i
 
-npm run hasura:ready
+npm run hasura:ready //To setup hasura engine
+
+npm run start:apollo //To start apollo graphql server
+
+npm run start:hasura //To run hasura engine
+
 ```
 
 Then open the console at localhost:8080 or [click here](http://localhost:8080) and enter the admin secret `8L88uxCSWmb2w4NsjuTJaEXwGz9RWMYmGtHc8KDZUVXgOrXyul41mJWj66Z4cLiZ`, then run the below query.
