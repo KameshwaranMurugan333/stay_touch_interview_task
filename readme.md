@@ -17,37 +17,38 @@ npm run start:hasura //To run hasura engine
 
 ```
 
-Then open the console at localhost:8080 or [click here](http://localhost:8080) and enter the admin secret `8L88uxCSWmb2w4NsjuTJaEXwGz9RWMYmGtHc8KDZUVXgOrXyul41mJWj66Z4cLiZ`, then run the below query.
+Then open the console at localhost:4000 or [click here](http://localhost:4000) and add the header 
+
+```
+Authoriztaion : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJ1c2VyX25hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AYWRtaW4uY29tIn0.dAfJ6Y3wTJGj3iD-XPWT6PzwIiGR223dUjo0rwAH3lg
+```
+then run the below query.
 
 #### To get users in pagination
 
 The below query returns the 3 users of 12 users in the database.  If you want the next 3 user (since limit is 3) need to change the offset to 3 and so for other set of data.
 
 ```
-query getUsers {
-  user(limit: 3, offset: 0) {
+query users {
+  users(limit: 3, offset: 0) {
     id
     first_name
     last_name
-    master_gender {
-      gender
-    }
+    gender
   }
 }
+
 ```
 
 
 #### To get users near me
 ```
-query getUserNearMe {
-  user_tracking(where: {lat_lang: {_st_d_within: {distance: 1000, from: {type: "Point", coordinates: [12.236186, 79.641492]}}}}) {
-    user {
-      first_name
-      last_name
-      master_gender {
-        gender
-      }
-    }
+query usersNearMe {
+  usersNearMe(lat:12.236186 , lang: 79.641492, distance: 1000) {
+    id
+    first_name
+    last_name
+    gender
   }
 }
 ```
