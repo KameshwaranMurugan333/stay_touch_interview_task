@@ -5,11 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "hasura:ready": "hasura metadata apply && hasura migrate apply --database-name stayTouch_v1 && hasura seed apply --database-name stayTouch_v1"
+    "hasura:ready": "hasura metadata apply && hasura migrate apply --database-name stayTouch_v1 && hasura seed apply --database-name stayTouch_v1",
+    "start:apollo": "nodemon index.js",
+    "start:hasura": "hasura console"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "hasura-cli": "^2.6.1"
+    "dotenv": "^16.0.1",
+    "hasura-cli": "^2.6.1",
+    "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "apollo-server": "^3.8.1",
+    "graphql": "^16.5.0",
+    "graphql-request": "^4.2.0"
   }
 }
