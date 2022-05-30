@@ -28,7 +28,7 @@ ALTER SEQUENCE public.user_id_seq OWNED BY public."user".id;
 CREATE TABLE public.user_tracking (
     id integer NOT NULL,
     user_id integer NOT NULL,
-    lat_lang public.geometry NOT NULL
+    lat_lang public.geography NOT NULL
 );
 CREATE SEQUENCE public.user_tracking_id_seq
     AS integer
